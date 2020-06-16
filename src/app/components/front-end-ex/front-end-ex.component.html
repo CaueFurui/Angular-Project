@@ -1,0 +1,110 @@
+<div>
+    <div>
+        <div>
+            <button class='goBack' (click)="goBack()">
+                <img class='arrow' (click)="goBack()" src='../../../assets/arrow-back.svg' />
+            </button>
+        </div>
+        <form #f="ngForm" (submit)="form_submit(f)" (keyUp.enter)="form_submit(f)" >
+            <table>
+                <tr>
+                    <td col-12>
+                        <strong>Aula de Artes do Professor Bentinho</strong>
+                    </td>
+                </tr>
+                <tr>
+                    <td col-12>
+                        <p>Abaixo, insira os dados do aluno e saiba a nota dele(a)</p>
+                        <!-- <form #f="ngForm" (submit)="form_submit(f)">
+                            <input type="text" ngModel name="nome" placeholder="Nome">
+                            <br />
+                            <input type="text" ngModel name="sobrenome" placeholder="Sobrenome">
+                            <br />
+                            <button type="submit">Cadastrar</button>
+                        </form> -->
+                    </td>
+                </tr>
+
+                <tr>
+                    <td col-12>
+                        <label>Nome do aluno(a)</label>
+                        <input ngModel name="nome" id="nome" placeholder="Nome">
+                    </td>
+                </tr>
+                <tr>
+                    <td col-6>
+                        <label>Nota P1</label>
+                        <input type='number' ngModel id="p1" name="p1" placeholder="Nota P1">
+                    </td>
+                    <td col-6>
+                        <label>Peso P1</label>
+                        <p class='resp'>0,25</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td col-6>
+                        <label>Nota P2</label>
+                        <input type='number' ngModel id="p2" name="p2" placeholder="Nota P2" (focusout)='calcMedia(f)'>
+                    </td>
+                    <td col-6>
+                        <label>Peso P2</label>
+                        <p class='resp'>0,25</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td col-6>
+                        <label>Nota P3</label>
+                        <input 
+                        type='number' 
+                        ngModel 
+                        id="p3" 
+                        name="p3" 
+                        placeholder="Nota P3"
+                        max='10'
+                        min='0'>
+                        <legend *ngIf="notaBaixa == true" class="notOk">Não é possível passar o aluno(a) {{nome}} de ano</legend>
+                        <legend *ngIf="notaBaixa == false" class="ok">O Aluno(a) {{nome}} precisa de {{falta}} para passar</legend>
+                    </td>
+                    <td col-6>
+                        <label>Peso P3</label>
+                        <p class='resp'>0,5</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td col-12>
+                        <button type='submit'>Clique para calcular</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <div>
+        <table>
+            <tr>
+                <td>
+                    <img src="../../../assets/art.svg" />
+                </td>
+            </tr>
+            <tr>
+                <td style=' width: 1000px !important' *ngIf='pessoas > []'>
+                    <label>
+                        Resultados dos Alunos
+                    </label>
+                    <ul>
+                        <li *ngFor="let p of pessoas" style='width: 100%;'>
+                            {{ "O Aluno(a) " + p.nome + " tirou a média de: " + p.res}}
+                            <b class='passou'*ngIf="p.res >= 6.2">e está APROVADO(A)</b>
+                            <b class='repete'*ngIf="p.res < 6.2">e está REPROVADO(A)</b>
+                            <button (click)=delete() class='delete'>X</button>
+                        </li>
+                    </ul>
+                    <div style='justify-content: center;'>
+                        <button (click)='clean()' class='clean' *ngIf='pessoas > []'>Limpar Tudo</button>
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+
+    </div>
+</div>

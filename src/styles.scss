@@ -1,0 +1,78 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+@font-face{
+    font-family: 'Montserrat-Bold';
+    src: url('./assets/Montserrat-Bold.ttf')}
+
+@font-face{
+    font-family: 'Montserrat-Regular';
+    src: url('./assets/Montserrat-Regular.ttf')
+
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+textarea:focus, input:focus, select:focus, button:focus {
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+} 
+
+
+* {
+    font-family: 'Montserrat-Regular';
+}
+
+input {
+    font-size: 30px;
+    font-family: 'Montserrat-Regular';
+    text-align: center;
+}
+
+strong {
+    font-family: 'Montserrat-Bold';
+}
+
+html, body {
+    background: #E5E5E5;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+button {
+    background-color: #1A3FFF;
+    border: 0;
+    font-size: 40px;
+    width: 486px;
+    height: 95px;
+    color: #fff;
+    border-radius: 15px;
+    transition: filter 0.2s;
+    cursor: pointer;
+}
+
+button:hover{
+    filter: brightness(80%);
+}
+
+.align-right {
+    text-align: right;
+}
+
+.arrow {
+    width: 60px !important;
+}
+
+.goBack{
+    background: transparent;
+    border: 0;
+    width: 10%;
+}

@@ -1,0 +1,100 @@
+img {
+    width: 540px;
+    margin-top: 0 auto;
+}
+
+div {
+    display: flex;
+
+    justify-content: space-between;
+}
+
+strong {
+    font-size: 32px;
+    justify-content: center;
+    text-align: center;
+}
+
+p{
+    font-size: 26px;
+}
+
+button {
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+label {
+    margin-top: 20%;
+    font-size: 18px;
+    width: 100%;
+    font-weight: bold;
+}
+
+input {
+    width: 280px;
+    height: 60px;
+    border: 1px solid #000; 
+    border-radius: 15px;
+}
+
+table {
+    display: grid;
+    width: 100%;
+}
+
+td {
+    width: 340px;
+    text-align: center;
+}
+
+tr {
+    margin: auto;
+}
+
+.resp {
+    font-size: 20px
+}
+
+.repete {
+    color: red
+}
+
+.passou {
+    color: green
+}
+
+.clean {
+    width: 200px !important;
+    height: 30px !important;
+    font-size: 20px !important;
+    background-color: red !important;
+}
+
+.delete {
+    width: 30px !important;
+    height: 30px !important;
+    font-size: 15px !important;
+    background-color: red !important;
+    border-radius: 5px;
+    margin-left: 25px;
+}
+
+.corVerde {
+    background: green !important;
+    color: white !important;
+}
+
+.corVermelha {
+    background: red !important;
+    color: white !important;
+}
+
+.ok {
+    color: green
+}
+
+
+.notOk {
+    color: red
+}

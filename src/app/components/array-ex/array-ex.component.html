@@ -1,0 +1,61 @@
+<div>
+    <div>
+        <div>
+            <button class='goBack' (click)="goBack()">
+                <img class='arrow' (click)="goBack()" src='../../../assets/arrow-back.svg' />
+            </button>
+        </div>
+        <table>
+            <tr>
+                <td col-12>
+                    <strong>Array Exercises</strong>
+                </td>
+            </tr>
+            <tr>
+                <td col-12>
+                    <p>Clique no botão para gerar os números</p>
+                </td>
+            </tr>
+            <tr>
+                <td col-6>
+                    <label>Array</label>
+                    <p class='resp' id="ex1" value=0>0</p>
+                    <p class='resp' *ngIf="avg">(Gerado Aleatoriamente)</p>
+                </td>
+                <td col-6>
+                    <label>Array Crescente/Decrescente</label>
+                    <p class='resp' id="ex4" value=0>0</p>
+                    <p class='resp' id="ex4b" value=0></p>
+                </td>
+            </tr>
+            <tr>
+                <td col-6>
+                    <label>Primeiro do Array</label>
+                    <p class='resp' id="ex2" value=0>0</p>
+                </td>
+                <td col-6>
+                    <label>Raízes do Array (arredondado)</label>
+                    <p class='resp' id="ex5" value=0>0</p>
+                </td>
+            </tr>
+            <tr>
+                <td col-6>
+                    <label>Array com (n-1)</label>
+                    <p class='resp' id="ex3" value=0>0</p>
+                </td>
+                <td col-6>
+                    <label>Média do Array</label>
+                    <p class='resp' id="ex6" value=0>0</p>
+                </td>
+            </tr>
+            <tr>
+                <td col-12>
+                    <button (click)='run()'>Clique para gerar</button>
+                </td>
+            </tr>
+        </table>
+        <div>
+            <img src='../../../assets/proud.svg'>
+        </div>
+    </div>
+</div>
